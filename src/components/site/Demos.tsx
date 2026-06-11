@@ -182,8 +182,8 @@ const DemoCard = ({
         <audio
           ref={audioRef}
           src={demo.src}
-          preload="metadata"
-          onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
+          preload="none"
+            onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
           onTimeUpdate={(e) => {
             const a = e.currentTarget;
             setCurrent(a.currentTime);
